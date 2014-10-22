@@ -66,7 +66,7 @@ class TestRateLimitation(unittest.TestCase):
     first request made if there is an opening in the window, allow request"""
     def test_4(self):
         sleep(60)
-        self.assertFalse(is_in_rate_limits(self.token,
+        self.assertTrue(is_in_rate_limits(self.token,
                                            self.redis_server))
 
 if __name__ == '__main__':
